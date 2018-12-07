@@ -1,5 +1,6 @@
 package com.muyuan.skip;
 
+import com.muyuan.skip.config.BeanMapperUtil;
 import com.muyuan.skip.entity.Info;
 import com.muyuan.skip.entity.Log;
 import com.muyuan.skip.entity.MyDeviceInfo;
@@ -12,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.LinkedList;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -34,8 +38,14 @@ public class DataMigrationApplicationTests {
 	@Test
 	public void test1() {
 		List<Info> infos = infoBiz.listInfo();
+		List<MyDeviceInfo> list = new LinkedList<>();
 		for(Info info : infos) {
+			MyDeviceInfo entity = BeanMapperUtil.map(info, MyDeviceInfo.class);
+			entity.setLon(new BigDecimal(info.getLon() != null ? info.getLon() : new BigInteger(String.valueOf(0))).divide(BigDecimal.valueOf(1000000), 6, BigDecimal.ROUND_CEILING));
+			entity.setLat(new BigDecimal(info.getLat() != null ? info.getLon() : new BigInteger(String.valueOf(0))).divide(BigDecimal.valueOf(1000000), 6, BigDecimal.ROUND_CEILING));
+			list.add(entity);
 		}
+		deviceInfoBiz.insetAll(list);
 		System.out.println(infos.toString());
 	}
 
