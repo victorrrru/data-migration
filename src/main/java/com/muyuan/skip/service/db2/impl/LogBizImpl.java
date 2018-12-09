@@ -8,6 +8,8 @@ import com.muyuan.skip.service.db2.LogBiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author 范文武
  * @date 2018/12/07 11:52
@@ -20,5 +22,15 @@ public class LogBizImpl extends ServiceImpl<LogMapper, Log> implements LogBiz {
     @Override
     public Log getLogById(Integer id) {
         return logMapper.getById(id);
+    }
+
+    @Override
+    public List<Log> listLog(String begin, String end) {
+        return logMapper.getLog(begin, end);
+    }
+
+    @Override
+    public List<Log> listAlarm(String begin, String end) {
+        return logMapper.getAlarm(begin, end);
     }
 }

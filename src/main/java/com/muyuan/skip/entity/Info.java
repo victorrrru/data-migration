@@ -36,11 +36,11 @@ public class Info {
     @TableField(value = "信号")
     private Integer semaphore;
     @TableField(value = "注册时间")
-    private Date registTime;
+    private String registTime;
     @TableField(value = "方向")
-    private Byte direction;
+    private Integer direction;
     @TableField(value = "通信时间")
-    private Date communicationTime;
+    private String communicationTime;
     @TableField(value = "SIM")
     private String sim;
     @TableField(value = "报警")

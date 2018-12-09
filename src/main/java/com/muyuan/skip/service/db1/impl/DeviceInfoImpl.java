@@ -16,8 +16,16 @@ import java.util.List;
 @Service
 public class DeviceInfoImpl extends ServiceImpl<MyDeviceInfoMapper, MyDeviceInfo> implements DeviceInfoBiz {
 
+    @Autowired
+    private MyDeviceInfoMapper mapper;
+
     @Override
     public Boolean insetAll(List<MyDeviceInfo> infos) {
         return insertBatch(infos);
+    }
+
+    @Override
+    public Integer getByDeviceNo(String deviceNo) {
+        return mapper.getId(deviceNo);
     }
 }

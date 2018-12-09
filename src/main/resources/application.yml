@@ -10,9 +10,9 @@ spring:
   datasource:
     druid:
       db1:
-        url: jdbc:mysql://120.77.173.16:3306/my_feedtruck?useUnicode=true&characterEncoding=UTF8
+        url: jdbc:mysql://10.106.11.37:3306/my_feedtruck?useUnicode=true&characterEncoding=UTF8
         username: root
-        password: 123456
+        password: 111111
         driver-class-name: com.mysql.jdbc.Driver
       db2:
         url: jdbc:sqlserver://10.106.7.120:30036;databaseName=truck2
@@ -24,27 +24,27 @@ spring:
 #mybatis
 #mybatis-plus:
 #  mapper-locations: classpath*:/mapper/**Mapper.xml
-#  #ÊµÌåÉ¨Ãè£¬¶à¸öpackageÓÃ¶ººÅ»òÕß·ÖºÅ·Ö¸ô
+#  #Êµï¿½ï¿½É¨ï¿½è£¬ï¿½ï¿½ï¿½packageï¿½Ã¶ï¿½ï¿½Å»ï¿½ï¿½ß·ÖºÅ·Ö¸ï¿½
 #  typeAliasesPackage: com.muyuan.platform.skip.entity.db
 #  global-config:
-#    #Ö÷¼üÀàĞÍ  0:"Êı¾İ¿âID×ÔÔö", 1:"ÓÃ»§ÊäÈëID",2:"È«¾ÖÎ¨Ò»ID (Êı×ÖÀàĞÍÎ¨Ò»ID)", 3:"È«¾ÖÎ¨Ò»ID UUID";
+#    #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  0:"ï¿½ï¿½ï¿½İ¿ï¿½IDï¿½ï¿½ï¿½ï¿½", 1:"ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ID",2:"È«ï¿½ï¿½Î¨Ò»ID (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¨Ò»ID)", 3:"È«ï¿½ï¿½Î¨Ò»ID UUID";
 #    id-type: 0
-#    #×Ö¶Î²ßÂÔ 0:"ºöÂÔÅĞ¶Ï",1:"·Ç NULL ÅĞ¶Ï"),2:"·Ç¿ÕÅĞ¶Ï"
+#    #ï¿½Ö¶Î²ï¿½ï¿½ï¿½ 0:"ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½",1:"ï¿½ï¿½ NULL ï¿½Ğ¶ï¿½"),2:"ï¿½Ç¿ï¿½ï¿½Ğ¶ï¿½"
 #    field-strategy: 2
-#    #ÍÕ·åÏÂ»®Ïß×ª»»
+#    #ï¿½Õ·ï¿½ï¿½Â»ï¿½ï¿½ï¿½×ªï¿½ï¿½
 #    db-column-underline: true
-#    #Ë¢ĞÂmapper µ÷ÊÔÉñÆ÷
+#    #Ë¢ï¿½ï¿½mapper ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #    refresh-mapper: true
-#    #Êı¾İ¿â´óĞ´ÏÂ»®Ïß×ª»»
+#    #ï¿½ï¿½ï¿½İ¿ï¿½ï¿½Ğ´ï¿½Â»ï¿½ï¿½ï¿½×ªï¿½ï¿½
 #    #capital-mode: true
-#    #ĞòÁĞ½Ó¿ÚÊµÏÖÀàÅäÖÃ
+#    #ï¿½ï¿½ï¿½Ğ½Ó¿ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #    #key-generator: com.baomidou.springboot.xxx
-#    #Âß¼­É¾³ıÅäÖÃ£¨ÏÂÃæ3¸öÅäÖÃ£©
+#    #ï¿½ß¼ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½
 #    logic-delete-value: 0
 #    logic-not-delete-value: 1
-#    #×Ô¶¨ÒåSQL×¢ÈëÆ÷
+#    #ï¿½Ô¶ï¿½ï¿½ï¿½SQL×¢ï¿½ï¿½ï¿½ï¿½
 #    #sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
-#    #×Ô¶¨ÒåÌî³ä²ßÂÔ½Ó¿ÚÊµÏÖ
+#    #ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ó¿ï¿½Êµï¿½ï¿½
 #    #meta-object-handler: com.baomidou.springboot.xxx
 #  configuration:
 #    map-underscore-to-camel-case: true

@@ -49,7 +49,7 @@ public class MyDeviceAlarm implements Serializable {
 
     // 接收时间
     @TableField(value = "receive_Time")
-    private Date receiveTime;
+    private String receiveTime;
 
     // 经度
     @TableField(value = "lon")

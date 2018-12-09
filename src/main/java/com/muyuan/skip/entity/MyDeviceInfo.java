@@ -69,11 +69,11 @@ public class MyDeviceInfo implements Serializable {
 
     // 注册时间
     @TableField(value = "regist_time")
-    private Date registTime;
+    private String registTime;
 
     // 通信时间
     @TableField(value = "communication_time")
-    private Date communicationTime;
+    private String communicationTime;
 
     // 发料提示
     @TableField(value = "note")
@@ -105,7 +105,7 @@ public class MyDeviceInfo implements Serializable {
 
     // 方向
     @TableField(value = "direction")
-    private String direction;
+    private Integer direction;
 
     // SIM
     @TableField(value = "sim")
@@ -133,7 +133,7 @@ public class MyDeviceInfo implements Serializable {
 
     //
     @TableField(value = "crt_hsot")
-    private String crtHsot;
+    private String crtHost;
 
     //
     @TableField(value = "upd_time")

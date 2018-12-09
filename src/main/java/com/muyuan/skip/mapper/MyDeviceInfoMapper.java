@@ -19,4 +19,6 @@ import java.util.List;
 public interface MyDeviceInfoMapper extends BaseMapper<MyDeviceInfo> {
     @Select("SELECT id, ip, device_no AS deviceNo, communication_time AS communicationTime FROM my_device_info where is_online = 1")
     List<MyDeviceInfo> listDevice();
+    @Select("select id from my_device_info where device_no=#{deviceNo}")
+    Integer getId(String deviceNo);
 }
