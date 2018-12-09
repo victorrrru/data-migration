@@ -64,7 +64,7 @@ public class DataMigrationApplicationTests {
 	public void testLog() {
 		DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDateTime begin = LocalDateTime.of(2018, 11, 7, 0, 0, 0);
-		LocalDateTime end = begin.plusDays(30);
+		LocalDateTime end = begin.plusDays(5);
 		List<Log> logs = logBiz.listLog(pattern.format(begin), pattern.format(end));
 		List<MyDeviceLog> list = new LinkedList<>();
 		int i = 0;
