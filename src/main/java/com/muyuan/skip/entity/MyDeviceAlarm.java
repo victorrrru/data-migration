@@ -81,7 +81,7 @@ public class MyDeviceAlarm implements Serializable {
 
     //
     @TableField(value = "crt_hsot")
-    private String crtHsot;
+    private String crtHost;
 
     //
     @TableField(value = "upd_time")
