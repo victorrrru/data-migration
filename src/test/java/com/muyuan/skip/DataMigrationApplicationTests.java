@@ -82,15 +82,15 @@ public class DataMigrationApplicationTests {
 	}
 
 	/**
-	 * alarm  11-07   ----   12-06
+	 * alarm  11-07   ----   12-08
 	 * //这里加事物会引起无法切库
 	 * @author fww
 	 */
 	@Test
 	public void testAlarm() {
 		DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-		LocalDateTime begin = LocalDateTime.of(2018, 11, 7, 0, 0, 0);
-		LocalDateTime end = begin.plusDays(30);
+		LocalDateTime begin = LocalDateTime.of(2018, 12, 6, 0, 0, 0);
+		LocalDateTime end = begin.plusDays(3);
 		List<Log> logs = logBiz.listAlarm(pattern.format(begin), pattern.format(end));
 		List<MyDeviceAlarm> list = new LinkedList<>();
 		int i = 0;
