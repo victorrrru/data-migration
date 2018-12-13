@@ -8,10 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-
 import java.util.Objects;
-
-import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 
 /**
  * @Author DGD
@@ -34,13 +31,13 @@ public class DataSourceSwitchAspect {
 
     @Before( "db1Aspect()" )
     public void db1(JoinPoint joinPoint) {
-        log.info("切换到db1 数据源...");
+        //log.info("切换到db1 数据源...");
         setDataSource(joinPoint,DBTypeEnum.db1);
     }
 
     @Before("db2Aspect()" )
     public void db2 (JoinPoint joinPoint) {
-        log.info("切换到db2 数据源...");
+        //log.info("切换到db2 数据源...");
         setDataSource(joinPoint,DBTypeEnum.db2);
     }
 

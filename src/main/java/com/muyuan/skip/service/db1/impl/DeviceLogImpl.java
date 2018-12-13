@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.muyuan.skip.entity.MyDeviceLog;
 import com.muyuan.skip.mapper.MyDeviceLogMapper;
 import com.muyuan.skip.service.db1.DeviceLogBiz;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -13,9 +14,16 @@ import java.util.List;
  */
 @Service
 public class DeviceLogImpl extends ServiceImpl<MyDeviceLogMapper, MyDeviceLog> implements DeviceLogBiz {
+    @Autowired
+    private MyDeviceLogMapper mapper;
 
     @Override
     public Boolean insetAll(List<MyDeviceLog> logs) {
         return insertBatch(logs, 1000);
+    }
+
+    @Override
+    public int deleteByDate(String date) {
+        return mapper.deleteByDate(date);
     }
 }

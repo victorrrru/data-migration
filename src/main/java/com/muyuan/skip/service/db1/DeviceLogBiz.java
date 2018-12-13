@@ -1,6 +1,7 @@
 package com.muyuan.skip.service.db1;
 
 import com.baomidou.mybatisplus.service.IService;
+import com.muyuan.skip.entity.Log;
 import com.muyuan.skip.entity.MyDeviceLog;
 
 import java.util.List;
@@ -11,4 +12,6 @@ import java.util.List;
  */
 public interface DeviceLogBiz extends IService<MyDeviceLog> {
     Boolean insetAll(List<MyDeviceLog> logs);
+
+    int deleteByDate(String date);
 }

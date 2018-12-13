@@ -1,7 +1,5 @@
-
-skip:
-  server:
-    port: 8080
+server:
+    port: 8000
 
 spring:
   aop:
@@ -10,45 +8,18 @@ spring:
   datasource:
     druid:
       db1:
-        url: jdbc:mysql://10.106.11.37:3306/my_feedtruck?useUnicode=true&characterEncoding=UTF8
-        username: root
-        password: 111111
+        url: jdbc:mysql://10.106.10.69:3306/my_feedtruck?useUnicode=true&characterEncoding=UTF8
+        username: my_ops_feedtruck
+        password: sO9NLYthxF.
         driver-class-name: com.mysql.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+    #10.106.10.69 my_ops_feedtruck sO9NLYthxF.
       db2:
         url: jdbc:sqlserver://10.106.7.120:30036;databaseName=truck2
         username: myszh
         password: my123!@#
         driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
+logging:
+  config: classpath:logback.xml
 
-#mybatis
-#mybatis-plus:
-#  mapper-locations: classpath*:/mapper/**Mapper.xml
-#  #ʵ��ɨ�裬���package�ö��Ż��߷ֺŷָ�
-#  typeAliasesPackage: com.muyuan.platform.skip.entity.db
-#  global-config:
-#    #��������  0:"���ݿ�ID����", 1:"�û�����ID",2:"ȫ��ΨһID (��������ΨһID)", 3:"ȫ��ΨһID UUID";
-#    id-type: 0
-#    #�ֶβ��� 0:"�����ж�",1:"�� NULL �ж�"),2:"�ǿ��ж�"
-#    field-strategy: 2
-#    #�շ��»���ת��
-#    db-column-underline: true
-#    #ˢ��mapper ��������
-#    refresh-mapper: true
-#    #���ݿ��д�»���ת��
-#    #capital-mode: true
-#    #���нӿ�ʵ��������
-#    #key-generator: com.baomidou.springboot.xxx
-#    #�߼�ɾ�����ã�����3�����ã�
-#    logic-delete-value: 0
-#    logic-not-delete-value: 1
-#    #�Զ���SQLע����
-#    #sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
-#    #�Զ��������Խӿ�ʵ��
-#    #meta-object-handler: com.baomidou.springboot.xxx
-#  configuration:
-#    map-underscore-to-camel-case: true
-#    cache-enabled: false
-#logging:
-#  config: classpath:logback.xml
-#

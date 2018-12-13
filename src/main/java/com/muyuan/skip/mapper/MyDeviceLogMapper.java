@@ -2,6 +2,7 @@ package com.muyuan.skip.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.muyuan.skip.entity.MyDeviceLog;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,5 +14,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface MyDeviceLogMapper extends BaseMapper<MyDeviceLog> {
-	
+
+    @Delete("delete from my_device_log where receive_time < #{date}")
+    int deleteByDate(String date);
 }
